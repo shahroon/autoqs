@@ -10,6 +10,12 @@
   </p>
 
   <p>
+    <strong>File:</strong>
+    <%= image_tag project.file_blob if project.file.present? %>
+  </p>
+
+
+  <p>
     <strong>Note:</strong>
     <%= project.note %>
   </p>
