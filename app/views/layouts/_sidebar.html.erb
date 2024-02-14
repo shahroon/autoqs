@@ -1,0 +1,13 @@
+<div class="w-64 bg-gray-800">
+  <div class="flex items-center justify-center h-16 bg-gray-900 text-white">
+    Projects
+  </div>
+  <!-- Sidebar Content -->
+  <ul class="py-4">
+    <% current_user.projects.each do |project| %>
+      <li class="px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white">
+        <a href="<%= project_path(project) %>"><%= project.job_number %></a>
+      </li>
+    <% end %>
+  </ul>
+</div>
