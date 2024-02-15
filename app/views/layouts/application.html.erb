@@ -13,9 +13,9 @@
   </head>
 
   <body class="bg-gray-400">
-    <%= render 'layouts/navbar' if current_user %>
+    <%= render 'layouts/navbar' %>
     <div class="flex h-screen bg-gray-200">
-      <%= render 'layouts/sidebar' if current_user %>
+      <%= render 'layouts/sidebar' %>
       <%= yield %>
     </div>
   </body>
