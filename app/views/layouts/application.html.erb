@@ -21,8 +21,11 @@
     <%= render "layouts/navbar" -%>
     <%= render 'layouts/sidebar'-%>
     <main class="p-4 md:ml-64 h-auto pt-20">
-      <%= render 'layouts/workspace'-%>
-      <%= yield %>
+      <%= render 'layouts/top_tabs'-%>
+      <div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-180 mb-6">
+          <%= yield %>
+      </div>
+      <%= render 'layouts/bottom_section'-%>
     </main>
   </div>
   </body>
