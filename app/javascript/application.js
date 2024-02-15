@@ -41,7 +41,11 @@ document.addEventListener("turbo:load", function() {
     // Initially show the first step
     showStep(currentStep);
 
-    // Event listeners for navigation buttons
-    document.getElementById('btnNext').addEventListener('click', goToNextStep);
-    document.getElementById('btnBack').addEventListener('click', goToPreviousStep);
+
+    if ($('#btnNext').length > 0 ) {
+        // Event listeners for navigation buttons
+        $('#btnNext').bind('click', goToNextStep);
+        $('#btnBack').bind('click', goToPreviousStep);
+    }
+
 });
