@@ -11,13 +11,21 @@
   </p>
 
   <p>
-    <strong>File:</strong>
+    <strong>File: <%= link_to(project.file.filename, rails_blob_path(project.file, disposition: 'attachment')) if project.file.present? %></strong>
     <%= image_tag(project.file_blob, style: 'width: 200px; height: auto;') if project.file.present? %>
   </p>
 
   <p>
     <strong>Note:</strong>
-    <%= project.note %>
+    <%= project.note || 'N/A' %>
   </p>
+    <div class="flex justify-center clear-both">
+      <span class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 m-2 cursor-pointer">Copy</span>
+      <span class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 m-2 cursor-pointer">Move</span>
+      <span class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 m-2 cursor-pointer">Delete</span>
+    </div>
   </div>
+
+
+  <br><br>
 </div>

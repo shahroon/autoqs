@@ -7,12 +7,12 @@
     <%= csp_meta_tag %>
     <%#= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="bg-gray-100">
+  <body class="bg-gray-400">
     <%= render 'layouts/navbar' if current_user %>
     <div class="flex h-screen bg-gray-200">
       <%= render 'layouts/sidebar' if current_user %>

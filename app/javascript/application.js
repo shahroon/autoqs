@@ -1,6 +1,7 @@
 // Configure your import map in config/importmap.rb. Read more: https://github.com/rails/importmap-rails
 import "@hotwired/turbo-rails"
 import "controllers"
+
 document.addEventListener("turbo:load", function() {
     const steps = document.querySelectorAll('.step');
     let currentStep = 0;
@@ -19,6 +20,14 @@ document.addEventListener("turbo:load", function() {
         if (currentStep < steps.length - 1) {
             currentStep++;
             showStep(currentStep);
+        } else {
+            $("form").submit();
+        }
+
+        if(currentStep == steps.length - 1) {
+            $("#btnNext").html("Save")
+        } else {
+            $("#btnNext").html("Next")
         }
     }
 
