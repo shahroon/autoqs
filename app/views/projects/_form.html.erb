@@ -19,7 +19,6 @@
       <div class="flex items-center mb-8">
         <div class="bg-blue-500 rounded-full h-8 w-8 flex items-center justify-center text-white font-semibold">1</div>
         <div class="ml-8">
-          <h2>Step 1: Project details</h2>
           <div class="md5">
             <%= form.label :job_number, class: 'block mb-2 text-sm font-medium text-gray-900 dark:text-white' %>
             <%= form.text_field :job_number, class: 'bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500' %>
@@ -37,7 +36,6 @@
       <div class="flex items-center mb-8">
         <div class="bg-blue-500 rounded-full h-8 w-8 flex items-center justify-center text-white font-semibold">2</div>
         <div class="ml-8">
-          <h2>Step 2: File</h2>
           <div class="md5">
             <%= form.label :file, class: 'block mb-2 text-sm font-medium text-gray-900 dark:text-white' %>
             <%= form.file_field :file, class: 'bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500' %>
@@ -51,23 +49,19 @@
       <div class="flex items-center mb-8">
         <div class="bg-blue-500 rounded-full h-8 w-8 flex items-center justify-center text-white font-semibold">3</div>
         <div class="ml-8">
-          <h2>Step 3: Additional details</h2>
           <div class="md5">
             <%= form.label :notes, class: 'block mb-2 text-sm font-medium text-gray-900 dark:text-white' %>
             <%= form.text_area :notes, class: 'bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500' %>
           </div>
           <br>
-          <div class="flex items-start mb-5">
-            <%= form.submit class: 'text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' %>
-          </div>
         </div>
       </div>
     </div>
 
     <!-- Buttons -->
     <div class="flex justify-between">
-      <span id="btnBack" class="px-4 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400">Back</span>
-      <span id="btnNext" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Next</span>
+      <span id="btnBack" class="px-4 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400 cursor-pointer">Back</span>
+      <span id="btnNext" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 cursor-pointer">Next</span>
     </div>
   </div>
 <% end %>
