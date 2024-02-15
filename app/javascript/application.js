@@ -1,6 +1,8 @@
 // Configure your import map in config/importmap.rb. Read more: https://github.com/rails/importmap-rails
-import "controllers"
-document.addEventListener("turbo:load", function() {
+//import ".//node_modules/@hotwired/turbo-rails";
+//import "./controllers"
+
+document.addEventListener("DOMContentLoaded", function() {
     const steps = document.querySelectorAll('.step');
     let currentStep = 0;
 
@@ -39,11 +41,7 @@ document.addEventListener("turbo:load", function() {
     // Initially show the first step
     showStep(currentStep);
 
-
-    if ($('#btnNext').length > 0 ) {
-        // Event listeners for navigation buttons
-        $('#btnNext').bind('click', goToNextStep);
-        $('#btnBack').bind('click', goToPreviousStep);
-    }
-
+    // Event listeners for navigation buttons
+    document.getElementById('btnNext').addEventListener('click', goToNextStep);
+    document.getElementById('btnBack').addEventListener('click', goToPreviousStep);
 });
