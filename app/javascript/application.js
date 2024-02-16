@@ -42,6 +42,18 @@ document.addEventListener("turbo:load", function() {
     showStep(currentStep);
 
     // Event listeners for navigation buttons
-    document.getElementById('btnNext').addEventListener('click', goToNextStep);
-    document.getElementById('btnBack').addEventListener('click', goToPreviousStep);
+    if($("#btnNext").length > 0){
+        document.getElementById('btnNext').addEventListener('click', goToNextStep);
+        document.getElementById('btnBack').addEventListener('click', goToPreviousStep);
+    }
+
+    $('.open-projects').bind('click', function(){
+
+        $("#project-open-modal").show();
+    })
+
+    $('.close-projects').bind('click', function(){
+        alert("lcik")
+        $('#project-open-modal').hide();
+    })
 });
